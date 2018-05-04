@@ -47,7 +47,7 @@ project GnatColl is
       use "lib/gnatcoll/" & Project'Library_Kind;
    for Library_Name    use Name;
 
-   for Languages use ("Ada");
+   for Languages use ("Ada", "C");
 
    type OS_Kind is ("windows", "unix", "osx");
    OS : OS_Kind := External ("GNATCOLL_OS", "unix");
