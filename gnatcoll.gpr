@@ -21,8 +21,6 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with "gpr";
-
 project GnatColl is
 
    Version := External ("GNATCOLL_VERSION", "0.0");
