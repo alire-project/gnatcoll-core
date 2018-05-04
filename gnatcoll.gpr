@@ -143,27 +143,6 @@ project GnatColl is
       for Specification  ("GNATCOLL.OS.Constants")
         use "gnatcoll-os-constants__" & OS & ".ads";
 
-      case OS is
-         when "unix" | "osx" =>
-            for Specification  ("GNATCOLL.Mmap.System")
-              use "gnatcoll-mmap-system__unix.ads";
-            for Implementation ("GNATCOLL.Mmap.System")
-              use "gnatcoll-mmap-system__unix.adb";
-            for Implementation ("GNATCOLL.IO.Native.Codec")
-              use "gnatcoll-io-native-codec__unix.adb";
-            for Implementation ("GNATCOLL.Plugins")
-              use "gnatcoll-plugins__unix.adb";
-         when "windows" =>
-            for Specification  ("GNATCOLL.Mmap.System")
-              use "gnatcoll-mmap-system__win32.ads";
-            for Implementation ("GNATCOLL.Mmap.System")
-              use "gnatcoll-mmap-system__win32.adb";
-            for Implementation ("GNATCOLL.IO.Native.Codec")
-              use "gnatcoll-io-native-codec__win32.adb";
-            for Implementation ("GNATCOLL.Plugins")
-              use "gnatcoll-plugins__windows.adb";
-      end case;
-
       case Atomics is
          when "intrinsic" =>
             for Implementation ("GNATCOLL.Atomic")
@@ -177,12 +156,5 @@ project GnatColl is
    package Linker is
       for Linker_Options use Extra_Libs;
    end Linker;
-
-   package Install is
-      for Artifacts ("share/examples/gnatcoll") use ("examples/*");
-      for Artifacts ("share/doc/gnatcoll/html") use ("docs/_build/html");
-      for Artifacts ("share/doc/gnatcoll")
-        use ("docs/_build/latex/GNATColl.pdf");
-   end Install;
 
 end GnatColl;
