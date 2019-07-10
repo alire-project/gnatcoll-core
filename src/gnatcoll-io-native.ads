@@ -21,8 +21,6 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-pragma Ada_05;
-
 private with GNATCOLL.Path;
 
 package GNATCOLL.IO.Native is

@@ -88,7 +88,9 @@ package body GNATCOLL.Email is
    function Clone_Headers (Ref : Header_List.List) return Header_List.List;
    --  Return a deep copy of the given list of headers.
 
-   Encoding_Names : constant array (Encoding_Type) of access constant String :=
+   type Constant_String_Access is access constant String;
+
+   Encoding_Names : constant array (Encoding_Type) of Constant_String_Access :=
      (Encoding_7bit   => new String'("7bit"),
       Encoding_8bit   => new String'("8bit"),
       Encoding_Binary => new String'("binary"),

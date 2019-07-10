@@ -21,7 +21,6 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-pragma Ada_05;
 with GNATCOLL.Atomic;   use GNATCOLL.Atomic;
 
 package body GNATCOLL.Refcount.Weakref is

@@ -60,8 +60,6 @@
 --    sugar, although it helps ensure that you are always reading existing keys
 --    (if your coding convention forces users to use these keys).
 
-pragma Ada_05;
-
 private with Ada.Containers.Indefinite_Hashed_Maps;
 private with Ada.Strings.Hash;
 private with GNATCOLL.Strings;
