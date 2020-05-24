@@ -1051,7 +1051,7 @@ package body GNATCOLL.Traces is
       if Debug_Mode
         and then not Global.Finalized  --  module not terminated
       then
-         Create_Exception_Handle (Handle);
+         Create_Exception_Handle (Trace_Handle (Handle));
          Trace (Handle.Exception_Handle,
                 Msg & Ada.Exceptions.Exception_Information (E),
                 Style => Style);
@@ -1149,7 +1149,8 @@ package body GNATCOLL.Traces is
          --  Decorate before the message
 
          for D in 1 ..  Global.Active_Last loop
-            Global.Active_Decorators (D).Before_Message (Handle, Msg);
+            Global.Active_Decorators (D).Before_Message (Trace_Handle (Handle),
+                                                         Msg);
          end loop;
 
          --  Add the message
@@ -1213,7 +1214,8 @@ package body GNATCOLL.Traces is
             Msg.Append (' ');
 
             for D in 1 ..  Global.Active_Last loop
-               Global.Active_Decorators (D).After_Message (Handle, Msg);
+               Global.Active_Decorators (D).After_Message
+                 (Trace_Handle (Handle), Msg);
             end loop;
 
             --  Remove trailing space if needed
@@ -1277,7 +1279,7 @@ package body GNATCOLL.Traces is
    begin
       if Active (Handle) then
          if not Condition then
-            Create_Exception_Handle (Handle);
+            Create_Exception_Handle (Trace_Handle (Handle));
             Trace
               (Handle.Exception_Handle,
                Error_Message,
@@ -1511,7 +1513,7 @@ package body GNATCOLL.Traces is
       (Decorator : not null access Trace_Decorator_Record'Class;
        Name      : String) is
    begin
-      Register_Handle (Decorator, To_Upper (Name));
+      Register_Handle (Trace_Handle (Decorator), To_Upper (Name));
       Decorator.Active := False;
 
       --  Set this flag, so that a "+" in the config file has no impact on
