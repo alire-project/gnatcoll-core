@@ -1,18 +1,19 @@
-makefile.setup
-
+/alire.lock
+b__*
+docs/_build
+examples/library/obj
 gnat/
+/gnat_src
+gnatinspect.*
+lib/
+makefile.setup
+obj/
 src/sqlite/amalgamation/sqlite3_for_gps
 
-docs/_build
-
 *.cgpr
-b__*
 *.bexch
 *.a
 *.d
-gnatinspect.*
-obj/
-lib/
 *.stdout
 *.stderr
 *.ali
@@ -25,6 +26,3 @@ lib/
 *.o
 *.deps
 *.pyc
-/gnat_src
-
-examples/library/obj

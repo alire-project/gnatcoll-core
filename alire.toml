@@ -1,0 +1,12 @@
+name = "gnatcoll"
+version = "0.0" # Not really intended for distribution
+description = "Slim, outdated version of gnatcoll-core"
+
+[gpr-set-externals]
+BUILD="DEBUG"
+LIBRARY_TYPE="static-pic"
+
+[gpr-set-externals."case(os)"]
+linux   = { GNATCOLL_OS = "unix" }
+macos   = { GNATCOLL_OS = "osx" }
+windows = { GNATCOLL_OS = "windows" }
