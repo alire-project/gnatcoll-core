@@ -21,8 +21,6 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with GNATCOLL.Strings;
-
 private package GNATCOLL.JSON.Utility is
 
    JsonMimeType           : constant String := "application/json";

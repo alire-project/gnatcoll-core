@@ -29,6 +29,8 @@ with Interfaces;                       use Interfaces;
 with GNAT.Encode_UTF8_String;
 with GNAT.Decode_UTF8_String;
 
+with GNATCOLL.Strings;
+
 package body GNATCOLL.JSON.Utility is
 
    use Ada.Strings.Unbounded;
