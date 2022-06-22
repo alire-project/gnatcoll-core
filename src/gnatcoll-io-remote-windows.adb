@@ -485,15 +485,14 @@ package body GNATCOLL.IO.Remote.Windows is
                   new String'("-r"),
                   new String'("""" & String (File) & """"),
                   new String'("2>&1"));
-      Status : Boolean;
-      pragma Unreferenced (Status);
+      Unused_Status : Boolean;
 
    begin
       if not State then
          Args (2) (Args (2)'First) := '+';
       end if;
 
-      Exec.Execute_Remotely (Args, Status);
+      Exec.Execute_Remotely (Args, Unused_Status);
       Free (Args);
    end Set_Writable;
 

@@ -35,7 +35,6 @@ with System;                            use System;
 with GNAT.Debug_Utilities;              use GNAT.Debug_Utilities;
 with GNATCOLL.Mmap;                     use GNATCOLL.Mmap;
 with GNAT.OS_Lib;                       use GNAT.OS_Lib;
-with GNATCOLL.Scripts;                  use GNATCOLL.Scripts;
 with GNATCOLL.Scripts.Impl;             use GNATCOLL.Scripts.Impl;
 with GNATCOLL.Traces;                   use GNATCOLL.Traces;
 with GNATCOLL.Utils;                    use GNATCOLL.Utils;

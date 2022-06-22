@@ -398,15 +398,14 @@ package body GNATCOLL.IO.Remote.Unix is
         (1 => new String'("chmod"),
          2 => new String'("u+w"),
          3 => new String'("""" & String (File) & """"));
-      Status : Boolean;
-      pragma Unreferenced (Status);
+      Unused_Status : Boolean;
 
    begin
       if not State then
          Args (2).all := "u-w";
       end if;
 
-      Exec.Execute_Remotely (Args, Status);
+      Exec.Execute_Remotely (Args, Unused_Status);
       Free (Args);
    end Set_Writable;
 
@@ -423,15 +422,14 @@ package body GNATCOLL.IO.Remote.Unix is
         (1 => new String'("chmod"),
          2 => new String'("u+r"),
          3 => new String'("""" & String (File) & """"));
-      Status : Boolean;
-      pragma Unreferenced (Status);
+      Unused_Status : Boolean;
 
    begin
       if not State then
          Args (2).all := "u-r";
       end if;
 
-      Exec.Execute_Remotely (Args, Status);
+      Exec.Execute_Remotely (Args, Unused_Status);
       Free (Args);
    end Set_Readable;
 

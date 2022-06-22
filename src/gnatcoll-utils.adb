@@ -608,14 +608,13 @@ package body GNATCOLL.Utils is
 
    begin
       declare
-         Result : Expect_Match;
-         pragma Unreferenced (Result);
+         Unused_Result : Expect_Match;
 
       begin
          --  This loop runs until the call to Expect raises Process_Died
 
          loop
-            Expect (Command.all, Result, ".+", Timeout => -1);
+            Expect (Command.all, Unused_Result, ".+", Timeout => -1);
 
             declare
                NOutput : String_Access;

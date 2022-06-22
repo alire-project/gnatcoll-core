@@ -824,8 +824,7 @@ package body GNATCOLL.IO.Remote is
       Tmp     : constant FS_String :=
                   GNATCOLL.Path.Ensure_Directory
                     (Tmp_Dir.Get_FS, Tmp_Dir.Full.all);
-      Dead    : Boolean;
-      pragma Unreferenced (Dead);
+      Unused  : Boolean;
 
    begin
       Unref (Tmp_Dir);
@@ -848,7 +847,7 @@ package body GNATCOLL.IO.Remote is
               "Invalid FS for host " & File.Get_Host;
       end case;
 
-      GNAT.OS_Lib.Delete_File (String (Tmp) & File.Tmp_Name, Dead);
+      GNAT.OS_Lib.Delete_File (String (Tmp) & File.Tmp_Name, Unused);
    end Close;
 
    ----------------
