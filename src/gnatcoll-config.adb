@@ -35,7 +35,7 @@ package body GNATCOLL.Config is
    use String_Maps;
 
    No_Value : constant Config_Value :=
-      (Len => 0, System_Id => Null_XString, Value => (others => ' '));
+      (Len => 0, System_ID => Null_XString, Value => (others => ' '));
 
    Whitespaces : constant Character_Set := To_Set
       (" " & ASCII.CR & ASCII.HT & ASCII.LF & ASCII.VT & ASCII.FF);

@@ -10,3 +10,6 @@ LIBRARY_TYPE="static-pic"
 linux   = { GNATCOLL_OS = "unix" }
 macos   = { GNATCOLL_OS = "osx" }
 windows = { GNATCOLL_OS = "windows" }
+
+[configuration]
+disabled = true

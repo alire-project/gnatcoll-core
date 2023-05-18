@@ -45,7 +45,6 @@
 --     String_Pools.Free (Str);   --  reclaim memory
 
 pragma Ada_2012;
-with Ada.Unchecked_Conversion;
 with Ada.Unchecked_Deallocation;
 with System.Storage_Pools;     use System.Storage_Pools;
 with System.Storage_Elements;  use System.Storage_Elements;

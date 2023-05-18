@@ -21,6 +21,8 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
+with Ada.Unchecked_Conversion;
+
 with System.Memory;           use System, System.Memory;
 
 package body GNATCOLL.Storage_Pools.Headers is
