@@ -435,7 +435,7 @@ package body GNATCOLL.Terminal is
 
 
    -----------------------------------------
-   -- Get_Lines (fastrgv addendum 9oct23) --
+   -- Get_Lines --
    -----------------------------------------
 
    function Get_Lines (Self : Terminal_Info) return Integer is
