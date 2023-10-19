@@ -135,7 +135,6 @@ int gnatcoll_terminal_width(int forStderr) {
 
 
 
-// fastrgv addendum (9oct23):
 int gnatcoll_terminal_lines(int forStderr) {
 #ifdef _WIN32  // MsWin
    const HANDLE handle =
