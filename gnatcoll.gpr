@@ -34,10 +34,11 @@ project GnatColl is
    Atomics   : Atomics_Kind := External ("GNATCOLL_ATOMICS", "intrinsic");
 
    type Build_Type is ("DEBUG", "PROD");
-   Build : Build_Type := External ("BUILD");
+   Build : Build_Type := External ("GNATCOLL_BUILD", External ("BUILD", "DEBUG"));
 
    type Library_Type_Type is ("relocatable", "static", "static-pic");
-   Library_Type : Library_Type_Type := External ("LIBRARY_TYPE");
+   Library_Type : Library_Type_Type :=
+     External ("GNATCOLL_LIBRARY_TYPE", External ("LIBRARY_TYPE", "static-pic"));
 
    for Source_Dirs     use ("src", "src/paragraph_filling");
    for Library_Kind    use Library_Type;

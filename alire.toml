@@ -3,8 +3,9 @@ version = "0.0" # Not really intended for distribution
 description = "Slim, outdated version of gnatcoll-core"
 
 [gpr-set-externals]
-BUILD="DEBUG"
-LIBRARY_TYPE="static-pic"
+# These should be set by the root crate, if anything
+# BUILD="DEBUG"
+# LIBRARY_TYPE="static-pic"
 
 [gpr-set-externals."case(os)"]
 linux   = { GNATCOLL_OS = "unix" }
